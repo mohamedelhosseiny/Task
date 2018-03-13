@@ -1,5 +1,21 @@
 // Results array
-var myarr = [];
+var resultArr = [
+  {
+    "timestamp": 150892000,
+    "headline": "New version of the product announced.",
+    "link": "http://example.url/new_version",
+    "authorName": "Paul Abbot",
+    "authorImageUrl": "http://example.url/authors/abbot.jpg"
+  },
+  {
+    "timestamp": 150892600,
+    "headline": "Even newer version of the product announced.",
+    "link": "http://example.url/newer_version",
+    "authorName": "Lisa Halliday",
+    "authorImageUrl": "http://example.url/authors/halliday.jpg"
+  }
+];
+
 
 // jQuery used for neater looking GET requests
 // Global GET Request
@@ -13,7 +29,7 @@ $.get('https://example.url/global', (data) => {
 
   // push the results to the array
   for (var i = 0; i < data.length; i++) {
-    myarr.push(data[i]);
+    resultArr.push(data[i]);
   }
 
   // local GET request
@@ -27,12 +43,12 @@ $.get('https://example.url/global', (data) => {
 
   // push the results to the array
   for (var i = 0; i < data2.length; i++) {
-    myarr.push(data2[i]);
+    resultArr.push(data2[i]);
   }
 
   // sort the array using compare function
-   myarr.sort((a,b)=> b.timestamp - a.timestamp);
-
+   resultArr.sort((a,b)=> b.timestamp - a.timestamp);
+   
   })  
 
 })
