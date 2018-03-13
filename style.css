@@ -1,0 +1,14 @@
+.tile {
+  border: 2px solid black;
+  width: 35vw;
+  height: 20vh;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.tile .tile_image {
+  float: left;
+  margin: 7px 20px 0px 10px;
+  border: 2px solid black;
+  border-radius: 400px;
+}
