@@ -21,34 +21,40 @@ var resultArr = [
 // Global GET Request
 $.get('https://example.url/global', (data) => {
 
+  // Parse JSON object
+  var globalData = JSON.parse(data);
+
   // add source attribute to each JSON object assuming it is
   // an array of objects
-  data.forEach( (e) => {
+  globalData.forEach( (e) => {
     e.source = "global";
   })
 
   // push the results to the array
-  for (var i = 0; i < data.length; i++) {
-    resultArr.push(data[i]);
+  for (var i = 0; i < globalData.length; i++) {
+    resultArr.push(globalData[i]);
   }
 
   // local GET request
   $.get('https://example.url/local', (data2) => {
 
+  // Parse JSON object
+  var localData = JSON.parse(data2);
+
   // add source attribute to each JSON object assuming it is
   // push the results to the array
-  data2.forEach( (e) => {
+  localData.forEach( (e) => {
     e.source = "local";
   })
 
   // push the results to the array
-  for (var i = 0; i < data2.length; i++) {
-    resultArr.push(data2[i]);
+  for (var i = 0; i < localData.length; i++) {
+    resultArr.push(localData[i]);
   }
 
   // sort the array using compare function
    resultArr.sort((a,b)=> b.timestamp - a.timestamp);
-   
+
   })  
 
 })
