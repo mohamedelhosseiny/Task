@@ -1,14 +1,19 @@
 .tile {
-  border: 2px solid black;
-  width: 35vw;
+  border: .5px solid black;
+  width: 400px;
+  /*min-width: 35vw;*/
   height: 20vh;
   margin: 0 auto;
   margin-bottom: 40px;
+  background-color: white;
 }
 
 .tile .tile_image {
   float: left;
   margin: 7px 20px 0px 10px;
-  border: 2px solid black;
   border-radius: 400px;
+}
+
+body {
+  background-color: #f8f8f8;
 }
