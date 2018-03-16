@@ -16,3 +16,11 @@ body {
   margin: 7px 20px 0px 10px;
   border-radius: 400px;
 }
+
+li {
+  padding-bottom: 25px;
+}
+
+hr {
+  margin: 50px 0px;
+}

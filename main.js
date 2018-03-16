@@ -37,11 +37,12 @@ let sortAndVisualize = (arr) => {
   for (var i= 0;i< arr.length;i++) {
       console.log(arr[i]);
    $('#list').append(
-     `<li>timestamp: ${arr[i].timestamp} <br>
-      authorImageUrl: ${arr[i].authorImageUrl} <br>
-      authorName: ${arr[i].authorName} <br>
-      headline: ${arr[i].headline} <br>
-      link: ${arr[i].link} <br>
+     `<li>
+      <strong> timestamp:</strong>  ${arr[i].timestamp} <br>
+      <strong> authorImageUrl:</strong>  ${arr[i].authorImageUrl} <br>
+      <strong> authorName:</strong>  ${arr[i].authorName} <br>
+      <strong> headline:</strong>  ${arr[i].headline} <br>
+      <strong> link:</strong>  ${arr[i].link} <br>
       </li> `);
    
   }
