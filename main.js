@@ -1,7 +1,7 @@
 // Results array
 var resultArr = [
   {
-    "timestamp": 150892000,
+    "timestamp": 150892400,
     "headline": "New version of the product announced.",
     "link": "http://example.url/new_version",
     "authorName": "Paul Abbot",
@@ -13,8 +13,28 @@ var resultArr = [
     "link": "http://example.url/newer_version",
     "authorName": "Lisa Halliday",
     "authorImageUrl": "http://example.url/authors/halliday.jpg"
-  }
+  },  {
+    "timestamp": 150892300,
+    "headline": "New version of the product announced.",
+    "link": "http://example.url/new_version",
+    "authorName": "Paul Abbot",
+    "authorImageUrl": "http://example.url/authors/abbot.jpg"
+  },
+  {
+    "timestamp": 150892500,
+    "headline": "Even newer version of the product announced.",
+    "link": "http://example.url/newer_version",
+    "authorName": "Lisa Halliday",
+    "authorImageUrl": "http://example.url/authors/halliday.jpg"
+  },
 ];
+
+let sortAndVisualize = (arr) => {
+  // sort array descending
+  resultArr.sort((a,b)=> b.timestamp - a.timestamp);
+}
+
+sortAndVisualize(resultArr);
 
 
 // jQuery used for neater looking GET requests
